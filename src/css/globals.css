@@ -3,7 +3,7 @@
 
 .principal{
   background-image: linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)),
-  url("/src/Components/images/istockphoto-868531430-612x612.jpg");
+  url("/src/Components/views/images/istockphoto-868531430-612x612.jpg");
   background-size:  cover;
   background-repeat: inherit;
 }
@@ -318,7 +318,7 @@ winter:FDF0E0;
 }
 
 .image-e {
-  background-image: url(/src/images/error.jpg);
+  background-image: url(/src/Components/views/images/error.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
