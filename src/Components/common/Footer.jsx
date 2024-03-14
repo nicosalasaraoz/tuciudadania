@@ -32,35 +32,8 @@ const Footer = () => {
                     Últimas Noticias
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link
-                    to="/error404"
-                    className="fw-bold"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Opinión
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    to="/error404"
-                    className="fw-bold"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Edición Impresa
-                  </Link>
-                </li>
               </ul>
               <ul className="col-12 col-md-4 col-lg-3 list-unstyled text-center oculto">
-                <li className="mb-2">
-                  <Link
-                    to="/error404"
-                    className="fw-bold text-white"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Clasificados
-                  </Link>
-                </li>
                 <li className="mb-2">
                   <Link
                     to="/error404"
