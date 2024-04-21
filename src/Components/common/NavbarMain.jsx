@@ -1,4 +1,4 @@
-import { Container, Dropdown, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -28,33 +28,18 @@ const NavbarMain = ({usuarioLogueado,setUsuarioLogueado, searchState, setSearchS
             <div className="d-flex justify-content-center">
               <div className="icono-call text-dark mb-1 mx-2">
                 <Link to="/" className="navIcons">
-                  <ion-icon name="home"></ion-icon>
                   <span className="textNav">Inicio</span>
                 </Link>
               </div>
               <div className="icono-call  text-dark mb-1 mx-2">
                 <Link to="/PaginaContacto" className="navIcons">
-                  <ion-icon name="call"></ion-icon>
-                  <span className="textNav">Contacto</span>
+                  <span className="textNav">Servicios</span>
                 </Link>
               </div>
-               <div className="navIcons">
-                
-                  <Dropdown className="navIcons">
-                        <Dropdown.Toggle  >
-                          
-                        
-                  {/* <Link to="/PaginaContacto" className="navIcons"> */}
-                  <ion-icon name="call"></ion-icon>
-                  <span className="textNav">Servicios</span>
-                        </Dropdown.Toggle>  
-                        <Dropdown.Menu>
-                          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown>
-                {/* </Link> */}
+              <div className="icono-call  text-dark mb-1 mx-2">
+                <Link to="/PaginaContacto" className="navIcons">
+                  <span className="textNav">Contacto</span>
+                </Link>
               </div>
             </div>
             <Form className="ocultar-buscador">
@@ -90,7 +75,7 @@ const NavbarMain = ({usuarioLogueado,setUsuarioLogueado, searchState, setSearchS
                                         <>
                                             <NavLink to="/administrar" className={"navIcons"}><ion-icon name="log-in-outline" size={3}></ion-icon><span className="textNav">Administrar</span>
                                             </NavLink>
-                                            <NavLink to="/" onClick={cerrarSesion} className={"navIcons"}><ion-icon name="log-in-outline" size={3}></ion-icon><span className="textNav">Logout</span></NavLink>
+                                            <NavLink to="/" onClick={cerrarSesion} className={"navIcons"}><span className="textNav">Logout</span></NavLink>
                                         </>
                                     ) : (
                                       <>
@@ -98,7 +83,7 @@ const NavbarMain = ({usuarioLogueado,setUsuarioLogueado, searchState, setSearchS
                                         <NavLink
                                             to="/"
                                             onClick={cerrarSesion}
-                                            className={"navIcons"}><ion-icon name="log-in-outline" size={3}></ion-icon><span className="textNav">Logout</span>
+                                            className={"navIcons"}><span className="textNav">Logout</span>
                                         </NavLink>
                                         </>
                                     )}
