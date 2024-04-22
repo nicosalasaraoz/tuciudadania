@@ -27,10 +27,7 @@ const PaginaContacto = () => {
       <h2 className="d-flex justify-content-center">¿Quieres contactarnos?</h2>
       <Container>
         <p>
-          Si tienes alguna duda, consulta o sugerencia rellena este formulario y
-          nos pondremos en contacto contigo lo antes posible. Tambien puedes
-          ponerte en contacto con nosotros llamando a nuestro numero de ATENCION
-          AL CLIENTE de RollingNews 381 5685235.
+          S
         </p>
       </Container>
       <Container>
