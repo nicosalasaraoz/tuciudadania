@@ -1,4 +1,4 @@
-import { Container, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, Dropdown, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -33,16 +33,13 @@ const NavbarMain = ({
             <div className="d-flex justify-content-center">
               <div className="icono-call text-dark mb-1 mx-2">
                 <Link to="/" className="navIcons">
+                  <ion-icon name="home"></ion-icon>
                   <span className="textNav">Inicio</span>
                 </Link>
               </div>
               <div className="icono-call  text-dark mb-1 mx-2">
                 <Link to="/PaginaContacto" className="navIcons">
-                  <span className="textNav">Servicios</span>
-                </Link>
-              </div>
-              <div className="icono-call  text-dark mb-1 mx-2">
-                <Link to="/PaginaContacto" className="navIcons">
+                  <ion-icon name="call"></ion-icon>
                   <span className="textNav">Contacto</span>
                 </Link>
               </div>
