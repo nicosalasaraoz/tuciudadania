@@ -31,6 +31,9 @@
 .icon-tog {
   font-size: 1rem;
 }
+.icon-tog>img{
+  border-radius: 50%;
+}
 
 .input-wrapper {
   position: relative;
@@ -108,9 +111,9 @@ width: 100%;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 78%,
-    rgba(121, 139, 143, 1) 100%
+    rgb(37, 46, 66) 5%,
+    #3e3e81 50%,
+    rgb(37, 46, 66) 110%
   );
 }
 
@@ -480,6 +483,7 @@ winter:FDF0E0;
 .navIconsContainer{
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
