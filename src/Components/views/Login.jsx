@@ -59,7 +59,7 @@ const Login = ({ setUsuarioLogueado }) => {
                             />
                             <Form.Text className="text-danger">{errors.pass?.message}</Form.Text>
                         </Form.Group>
-                        <Button variant="danger" type="submit">
+                        <Button variant="sucess" type="submit">
                             Ingresar
                         </Button>
                     </Form>

@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="mt-auto">
         <footer className=" bg-footer py-5 text-white principal">
           <div className="container py-5">
-            <nav className="row ">
+            <nav className="row">
               <Link
                 to="/"
-                className="col-12 col-md-4 col-lg-3 d-flex aling-items-center justify-content-center"
+                className="col-12 col-md-4 col-lg-3 d-flex aling-items-center justify-content-center icon-tog"
               >
                
                 <img

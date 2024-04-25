@@ -100,7 +100,7 @@ const Registro = ({ setUsuarioLogueado }) => {
                     </Col>
                 </Row>
                 <div className="text-center mt-2">
-                    <Button variant="danger" type="submit">
+                    <Button variant="success" type="submit">
                         Registrarse
                     </Button>
                 </div>
