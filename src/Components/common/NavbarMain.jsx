@@ -1,4 +1,4 @@
-import { Container, Dropdown, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, NavDropdown, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -36,29 +36,26 @@ const NavbarMain = ({
                   <span className="textNav">Inicio</span>
                 </Link>
               </div>
-              <div className="icono-call  text-dark mb-1 mx-2">
+              <div className="icono-call mb-1 mx-2">
                 <Link to="/PaginaContacto" className="navIcons">
                   <span className="textNav">Contacto</span>
                 </Link>
-              </div>
-              <div className="navIcons">
-                <Dropdown className="navIcons">
-                  <Dropdown.Toggle>
-                    {/* <Link to="/PaginaContacto" className="navIcons"> */}
-                    <span className="textNav">Servicios</span>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Another action
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Something else
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                {/* </Link> */}
-              </div>
+             </div>
+              <div className="icono-call mb-1 mx-2">
+                
+                  <NavDropdown
+                    className="icono-call mb-1 mx-2"
+                    title="Servicios"
+                    menuVariant="white"
+                  >
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                  </NavDropdown>
+
+            </div>
             </div>
             <Form className="ocultar-buscador">
               <Form.Control
