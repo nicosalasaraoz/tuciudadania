@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Form } from "react-bootstrap";
 import { Field, Formik } from "formik";
 import * as Yup from "yup";
+import logo from './images/logo.jpg'
 
 const SignupSchema = Yup.object().shape({
   user: Yup.string()
@@ -16,18 +17,16 @@ const SignupSchema = Yup.object().shape({
 
 const PaginaContacto = () => {
   return (
-    <>
-      <Container className="d-flex fluid justify-content-center">
-        <img
-          src="../images/logo.jpg"
-          alt="logo"
-          className="tamaño-mobile w-50 h-50 mt-5"
-        />
-      </Container>
-      <h2 className="d-flex justify-content-center">¿Quieres contactarnos?</h2>
+    <div className="contactContainer">
+    <div className="sectionContainer">
+      <section className="contactImg">
+        <img src={logo} alt="logo" />
+        <h2>¿Quieres contactarnos?</h2>
+      </section>
+      </div>
       <Container>
         <p>
-          S
+          
         </p>
       </Container>
       <Container>
@@ -151,7 +150,7 @@ const PaginaContacto = () => {
         </Formik>
       </Container>
 
-    </>
+    </div>
   );
 };
 
