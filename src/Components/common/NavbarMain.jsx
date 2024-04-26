@@ -33,13 +33,11 @@ const NavbarMain = ({
             <div className="d-flex justify-content-center">
               <div className="icono-call text-dark mb-1 mx-2">
                 <Link to="/" className="navIcons">
-                  <ion-icon name="home"></ion-icon>
                   <span className="textNav">Inicio</span>
                 </Link>
               </div>
               <div className="icono-call  text-dark mb-1 mx-2">
                 <Link to="/PaginaContacto" className="navIcons">
-                  <ion-icon name="call"></ion-icon>
                   <span className="textNav">Contacto</span>
                 </Link>
               </div>
@@ -47,7 +45,6 @@ const NavbarMain = ({
                 <Dropdown className="navIcons">
                   <Dropdown.Toggle>
                     {/* <Link to="/PaginaContacto" className="navIcons"> */}
-                    <ion-icon name="call"></ion-icon>
                     <span className="textNav">Servicios</span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
@@ -92,7 +89,6 @@ const NavbarMain = ({
                       onClick={cerrarSesion}
                       className={"navIcons"}
                     >
-                      <ion-icon name="log-in-outline" size={3}></ion-icon>
                       <span className="textNav">Logout</span>
                     </NavLink>
                   </>
@@ -101,7 +97,6 @@ const NavbarMain = ({
                     {usuarioLogueado && usuarioLogueado.rol === "admin" ? (
                       <>
                         <NavLink to="/administrar" className={"navIcons"}>
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
                           <span className="textNav">Administrar</span>
                         </NavLink>
                         <NavLink
@@ -109,18 +104,17 @@ const NavbarMain = ({
                           onClick={cerrarSesion}
                           className={"navIcons"}
                         >
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
+                          
                           <span className="textNav">Logout</span>
                         </NavLink>
                       </>
                     ) : (
                       <>
                         <NavLink to="/usuario/login" className={"navIcons"}>
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
+                          
                           <span className="textNav">Login</span>
                         </NavLink>
                         <NavLink to="/usuario/registro" className={"navIcons"}>
-                          <ion-icon name="calendar"></ion-icon>
                           <span className="textNav">Registrarse</span>
                         </NavLink>
                       </>
