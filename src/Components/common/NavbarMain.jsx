@@ -43,10 +43,21 @@ const NavbarMain = ({
                   <span className="textNav">Contacto</span>
                 </Link>
               </div>
-              <div className="navIcons">
+                <div className="serviciosDropDown">
+                  <div className="mainServicios icono-call">
+                    <Link className="item-text textNav navIcons">Servicios</Link>
+                  </div>
+                  <ul className="menuServicios">
+                    <li className="menuItem">Servicio Uno</li>
+                    <li className="menuItem">Servicio Dos</li>
+                    <li className="menuItem">Servicio Tres</li>
+                    <li className="menuItem">Servicio Cuarto</li>
+                  </ul>
+                </div>
+
+              {/* <div className="navIcons">
                 <Dropdown className="navIcons">
                   <Dropdown.Toggle>
-                    {/* <Link to="/PaginaContacto" className="navIcons"> */}
                     <ion-icon name="call"></ion-icon>
                     <span className="textNav">Servicios</span>
                   </Dropdown.Toggle>
@@ -60,8 +71,7 @@ const NavbarMain = ({
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-                {/* </Link> */}
-              </div>
+              </div> */}
             </div>
             <Form className="ocultar-buscador">
               <Form.Control
