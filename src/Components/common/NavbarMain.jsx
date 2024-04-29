@@ -1,4 +1,4 @@
-import { Container, Dropdown, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, NavDropdown, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -33,13 +33,11 @@ const NavbarMain = ({
             <div className="d-flex justify-content-center">
               <div className="icono-call text-dark mb-1 mx-2">
                 <Link to="/" className="navIcons">
-                  <ion-icon name="home"></ion-icon>
                   <span className="textNav">Inicio</span>
                 </Link>
               </div>
-              <div className="icono-call  text-dark mb-1 mx-2">
+              <div className="icono-call mb-1 mx-2">
                 <Link to="/PaginaContacto" className="navIcons">
-                  <ion-icon name="call"></ion-icon>
                   <span className="textNav">Contacto</span>
                 </Link>
               </div>
@@ -54,24 +52,22 @@ const NavbarMain = ({
                     <li className="menuItem">Servicio Cuarto</li>
                   </ul>
                 </div>
+             </div>
+              <div className="icono-call mb-1 mx-2">
+                
+                  <NavDropdown
+                    className="icono-call mb-1 mx-2"
+                    title="Servicios"
+                    menuVariant="white"
+                  >
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                  </NavDropdown>
 
-              {/* <div className="navIcons">
-                <Dropdown className="navIcons">
-                  <Dropdown.Toggle>
-                    <ion-icon name="call"></ion-icon>
-                    <span className="textNav">Servicios</span>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Another action
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Something else
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div> */}
+            </div>
             </div>
             <Form className="ocultar-buscador">
               <Form.Control
@@ -102,7 +98,6 @@ const NavbarMain = ({
                       onClick={cerrarSesion}
                       className={"navIcons"}
                     >
-                      <ion-icon name="log-in-outline" size={3}></ion-icon>
                       <span className="textNav">Logout</span>
                     </NavLink>
                   </>
@@ -111,7 +106,6 @@ const NavbarMain = ({
                     {usuarioLogueado && usuarioLogueado.rol === "admin" ? (
                       <>
                         <NavLink to="/administrar" className={"navIcons"}>
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
                           <span className="textNav">Administrar</span>
                         </NavLink>
                         <NavLink
@@ -119,18 +113,17 @@ const NavbarMain = ({
                           onClick={cerrarSesion}
                           className={"navIcons"}
                         >
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
+                          
                           <span className="textNav">Logout</span>
                         </NavLink>
                       </>
                     ) : (
                       <>
                         <NavLink to="/usuario/login" className={"navIcons"}>
-                          <ion-icon name="log-in-outline" size={3}></ion-icon>
+                          
                           <span className="textNav">Login</span>
                         </NavLink>
                         <NavLink to="/usuario/registro" className={"navIcons"}>
-                          <ion-icon name="calendar"></ion-icon>
                           <span className="textNav">Registrarse</span>
                         </NavLink>
                       </>
