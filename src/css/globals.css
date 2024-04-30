@@ -11,6 +11,45 @@
 .bg-navbar {
   background: rgb(2, 0, 36);
 }
+/* Dropdown Servicios */
+.mainServicios{
+  position: relative;
+}
+.mainServicios:hover  + .menuServicios{
+ transform: translateY(0);
+ transition: opacity .5s ease-in-out,transform .5s ease-in-out;
+ opacity: 1;
+}
+.menuServicios:hover{
+  transform: translateY(0);
+  transition: opacity .3s ease-in-out,transform .5s ease-in-out;
+  opacity: 1;
+}
+.menuServicios{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  transition: opacity .3s ease-in-out,transform .5s ease-in-out;
+  transform: translateY(-10%);
+  opacity: 0;
+  position: absolute;
+  z-index: 111;
+}
+.menuItem{
+  padding: .5rem 1rem;
+  width: 100%;
+  text-align: center;
+}
+.menuItem:hover{
+  background:#3e3e81;
+  cursor: pointer;
+}
+
+
 
 /* Imagen de contacto */
 .contactContainer {
@@ -29,7 +68,7 @@
 .contactImg {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   position: relative;
   border-image: fill 0 linear-gradient(#0001, #0000);
 }
