@@ -1,4 +1,4 @@
-import { Container, NavDropdown, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -53,22 +53,6 @@ const NavbarMain = ({
                   </ul>
                 </div>
              </div>
-              <div className="icono-call mb-1 mx-2">
-                
-                  <NavDropdown
-                    className="textNav icono-call mb-1 mx-2"
-                    title="Servicios"
-
-                  >
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                  </NavDropdown>
-
-            </div>
-            </div>
             <Form className="ocultar-buscador">
               <Form.Control
                 type="search"
