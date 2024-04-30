@@ -44,9 +44,9 @@ const NavbarMain = ({
               <div className="icono-call mb-1 mx-2">
                 
                   <NavDropdown
-                    className="icono-call mb-1 mx-2"
+                    className="textNav icono-call mb-1 mx-2"
                     title="Servicios"
-                    menuVariant="white"
+
                   >
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
