@@ -1,7 +1,10 @@
-import { Container, NavDropdown, Form, Nav, Navbar } from "react-bootstrap";
+import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp  } from "react-icons/io";
+
 
 const NavbarMain = ({
   usuarioLogueado,
@@ -14,6 +17,11 @@ const NavbarMain = ({
     localStorage.removeItem("usuarioLogueado");
     setUsuarioLogueado();
   };
+
+const [classToggle, setClassToggle] = useState(false);
+const dropDownToggle = ()=>{
+ !classToggle? setClassToggle(true):setClassToggle(false);
+}
 
   return (
     <>
@@ -43,9 +51,9 @@ const NavbarMain = ({
               </div>
                 <div className="serviciosDropDown">
                   <div className="mainServicios icono-call">
-                    <Link className="item-text textNav navIcons">Servicios</Link>
+                    <Link className="item-text textNav navIcons" onClick={dropDownToggle}>Servicios{classToggle?<IoIosArrowUp className="mx-1 " />:<IoIosArrowDown className="mx-1 mt-1" />}</Link>
                   </div>
-                  <ul className="menuServicios">
+                  <ul className={classToggle ? 'menuServiciosActive':'menuServicios'}>
                     <li className="menuItem">Servicio Uno</li>
                     <li className="menuItem">Servicio Dos</li>
                     <li className="menuItem">Servicio Tres</li>
@@ -53,22 +61,6 @@ const NavbarMain = ({
                   </ul>
                 </div>
              </div>
-              <div className="icono-call mb-1 mx-2">
-                
-                  <NavDropdown
-                    className="icono-call mb-1 mx-2"
-                    title="Servicios"
-                    menuVariant="white"
-                  >
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                  </NavDropdown>
-
-            </div>
-            </div>
             <Form className="ocultar-buscador">
               <Form.Control
                 type="search"
@@ -131,21 +123,8 @@ const NavbarMain = ({
                   </>
                 )}
               </div>
-              <div className="d-flex ">
-                <ul className="SocialHeader">
-                  <li>
-                    <Link to="/error404" className="">
-                      <FaFacebookF />
-                    </Link>
-                    <Link to="/error404" className="">
-                      <FaTwitter />
-                    </Link>
-                    <Link to="/error404" className="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              
+           
               <div className="sec-nav">
                 <hr className="text-white" />
                 <h3 className="text-white fs-5">SECCIONES</h3>
@@ -194,8 +173,28 @@ const NavbarMain = ({
                   </Link>
                 </Container>
               </div>
+              
             </Nav>
+          
           </Navbar.Collapse>
+          
+                <ul className="headerIcons">
+                  <li className="item">
+                    <Link to="/error404" className="headerIcon">
+                      <FaFacebookF className="aa" />
+                    </Link>
+                    </li>
+                    <li className="item">
+                    <Link to="/error404" className="headerIcon">
+                      <FaTwitter className="aa"/>
+                    </Link>
+                    </li>
+                    <li className="item">
+                    <Link to="/error404" className="headerIcon">
+                      <FaInstagram className="aa" />
+                    </Link>
+                  </li>
+                </ul>
         </Container>
       </Navbar>
     </>

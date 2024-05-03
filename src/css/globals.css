@@ -15,16 +15,22 @@
 .mainServicios{
   position: relative;
 }
-.mainServicios:hover  + .menuServicios{
+.menuServiciosActive{
  transform: translateY(0);
  transition: opacity .5s ease-in-out,transform .5s ease-in-out;
  opacity: 1;
+ position: absolute;
+ z-index: 111;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 0;
+ margin: 0;
+ background: #000;
+ color: #fff;
 }
-.menuServicios:hover{
-  transform: translateY(0);
-  transition: opacity .3s ease-in-out,transform .5s ease-in-out;
-  opacity: 1;
-}
+
 .menuServicios{
   display: flex;
   flex-direction: column;
@@ -37,7 +43,7 @@
   transform: translateY(-10%);
   opacity: 0;
   position: absolute;
-  z-index: 111;
+  z-index: -1;
 }
 .menuItem{
   padding: .5rem 1rem;
@@ -72,6 +78,10 @@
   position: relative;
   border-image: fill 0 linear-gradient(#0001, #0000);
 }
+.contactImg>img{
+  width: 100%;
+}
+
 .contactImg::after {
   content: "";
   position: absolute;
@@ -91,6 +101,11 @@
   z-index: 11;
   padding: 2rem;
   font-size: 3rem;
+}
+@media screen and (max-width: 400px) {
+  .contactImg > h2{
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -504,6 +519,75 @@ winter:FDF0E0;
 .SocialHeader a:hover::after {
   animation: pulse 1s;
   transition: scale 1s ease;
+}
+
+/* ICONOS REDES SOCIALES HEADER */
+.headerIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 1rem;
+  gap: 1rem;
+  
+}
+.headerIcon{
+  border: 2px solid #fff;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 1.3rem;
+
+}
+.headerIcon{
+  color:black;
+}
+.headerIcon::after{
+  content: "";
+  background: var(--bgColor);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  scale:1 0 ;
+  transform-origin: bottom;
+  transition: scale .5s ease;
+}
+.headerIcon:hover::after{
+  scale: 1 1;
+}
+
+.headerIcon:hover{
+color: #fff;
+}
+.aa{
+  z-index: 11;
+  transition: .5s ease;
+}
+.headerIcon:hover .aa{
+transform: rotateY(1turn);
+transition: .5s ease;
+}
+.item:nth-child(1){
+  --bgColor: #3b5998;
+}
+.item:nth-child(2){
+  --bgColor:#00acee;
+}
+.item:nth-child(3){
+  --bgColor:linear-gradient(to bottom, #f9ce34,#ee2a7b,#6228d7)
+}
+
+@media screen and (max-width:800px) {
+  .headerIcons{
+display: none;
+  }
 }
 
 .SearchBar {
